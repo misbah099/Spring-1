@@ -1,0 +1,7 @@
+com\uni\repository\StudentRepository.class
+com\uni\entity\Student$StudentBuilder.class
+com\uni\controller\StudentController.class
+com\uni\service\StudentService.class
+com\uni\entity\Student.class
+com\uni\serviceimpl\StudentServiceimpl.class
+com\uni\StudentbootApplication.class

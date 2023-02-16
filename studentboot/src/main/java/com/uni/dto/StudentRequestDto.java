@@ -22,6 +22,6 @@ public class StudentRequestDto {
 	@Size(min = 5, max = 130, message = "Invalid ADDRESS: Must be of 5 - 130 characters")
 	private String address;
 	@NotNull(message = "Invalid Phone number: Number is NULL")
-	long mobile;
+	Long mobileno;
 	
 }

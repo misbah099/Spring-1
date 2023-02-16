@@ -44,6 +44,8 @@ private StudentRepository studentRepository;
 		Student _student=studentRepository.findById(id).get() ;
 		_student.setName(student.getName());
 		_student.setName(student.getEmail());
+		_student.setName(student.getAddress());
+		_student.setMobileno(student.getMobileno());
 
 		return studentRepository.save(_student);
 	}
@@ -52,7 +54,7 @@ private StudentRepository studentRepository;
 	public String delete(long id) {
 		// TODO Auto-generated method stub
 		studentRepository.deleteById(id);
-		return "The student with"+id+"has been Deleted";
+		return "The student with id:"+id+" has been Deleted";
 	}
 
 	@Override

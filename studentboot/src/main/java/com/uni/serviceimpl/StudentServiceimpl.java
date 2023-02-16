@@ -22,7 +22,7 @@ private StudentRepository studentRepository;
 	public Student createStudent(StudentRequestDto studentRequest) {
 
 		Student student = Student.builder().name(studentRequest.getName()).address(studentRequest.getAddress())
-				.email(studentRequest.getEmail()).mobileno(studentRequest.getMobile()).build();
+				.email(studentRequest.getEmail()).mobileno(studentRequest.getMobileno()).build();
 		return studentRepository.save(student);
 	}
 	
@@ -43,11 +43,10 @@ private StudentRepository studentRepository;
 		// TODO Auto-generated method stub
 		Student _student=studentRepository.findById(id).get() ;
 		_student.setName(student.getName());
-		_student.setName(student.getEmail());
-		_student.setName(student.getAddress());
+		_student.setEmail(student.getEmail());
+		_student.setAddress(student.getAddress());
 		_student.setMobileno(student.getMobileno());
-
-		return studentRepository.save(_student);
+                return studentRepository.save(_student);
 	}
 
 	@Override
